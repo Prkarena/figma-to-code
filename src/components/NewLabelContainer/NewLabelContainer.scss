@@ -1,0 +1,123 @@
+.label-editor {
+    border-radius: 6px;
+    border: 1px solid rgba(209, 213, 218, 1);
+    background-color: #f6f8fa;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    line-height: 143%;
+    padding: 80px 20px 19px;
+  
+    .label-list {
+      display: flex;
+      gap: 20px;
+  
+      @media (max-width: 991px) {
+        flex-wrap: wrap;
+        padding-right: 20px;
+      }
+  
+      .label-item {
+        display: flex;
+        gap: 20px;
+  
+        @media (max-width: 991px) {
+          flex-wrap: wrap;
+        }
+  
+        .label-name-container,
+        .label-description-container,
+        .label-color-container {
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+        }
+  
+        .label-name-title,
+        .label-description-title,
+        .label-color-title {
+          color: var(--text-primary, #24292e);
+          font-family: Inter, sans-serif;
+          font-weight: 600;
+          letter-spacing: -0.15px;
+        }
+  
+        .label-name,
+        .label-description,
+        .label-color-hex {
+          font-family: Inter, sans-serif;
+          border-radius: 6px;
+          box-shadow: 0px 1px 2px 0px rgba(27, 31, 35, 0.08) inset;
+          border: 1px solid rgba(225, 228, 232, 1);
+          background-color: var(--input-bg, #fff);
+          margin-top: 8px;
+          color: #24292e;
+          font-weight: 400;
+          justify-content: center;
+          padding: 6px 0;
+  
+          @media (max-width: 991px) {
+            white-space: initial;
+          }
+        }
+  
+        .label-color {
+          display: flex;
+          margin-top: 8px;
+          gap: 8px;
+          color: #24292e;
+          font-weight: 400;
+  
+          .label-color-swatch {
+            aspect-ratio: 1;
+            width: 32px;
+            box-shadow: 0px 2px 0px 0px rgba(255, 255, 255, 0.25) inset,
+              0px 1px 0px 0px rgba(27, 31, 35, 0.04);
+            border: 1px solid rgba(27, 31, 35, 0.15);
+          }
+        }
+      }
+    }
+  
+    .label-actions {
+      display: flex;
+      margin-top: 73px;
+      gap: 20px;
+      font-weight: 600;
+      justify-content: space-between;
+  
+      @media (max-width: 991px) {
+        max-width: 100%;
+        flex-wrap: wrap;
+        margin-top: 40px;
+      }
+  
+      .cancel-button,
+      .create-button {
+        font-family: Inter, sans-serif;
+        border-radius: 6px;
+        border: 1px solid rgba(27, 31, 35, 0.15);
+        justify-content: center;
+        padding: 6px 16px;
+        cursor: pointer;
+  
+        @media (max-width: 991px) {
+          white-space: initial;
+        }
+      }
+  
+      .cancel-button {
+        box-shadow: 0px 2px 0px 0px rgba(255, 255, 255, 0.25) inset,
+          0px 1px 0px 0px rgba(27, 31, 35, 0.04);
+        background-color: var(--Gray-gray-000, #fafbfc);
+        color: #24292e;
+      }
+  
+      .create-button {
+        box-shadow: 0px 2px 0px 0px rgba(255, 255, 255, 0.03) inset,
+          0px 1px 0px 0px rgba(27, 31, 35, 0.1);
+        background-color: var(--btn-primary-default, #2ea44f);
+        color: var(--Text-text-white, #fff);
+      }
+    }
+  }
